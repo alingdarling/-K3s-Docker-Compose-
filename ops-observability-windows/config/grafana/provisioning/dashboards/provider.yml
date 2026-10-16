@@ -1,0 +1,10 @@
+apiVersion: 1
+providers:
+  - name: Windows Operations Lab
+    orgId: 1
+    folder: Windows Operations Lab
+    type: file
+    disableDeletion: true
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards

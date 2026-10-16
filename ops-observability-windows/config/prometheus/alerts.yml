@@ -1,0 +1,11 @@
+groups:
+  - name: service-health
+    rules:
+      - alert: NginxExporterUnavailable
+        expr: up{job="nginx-demo"} == 0
+        for: 10s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Nginx exporter is unavailable"
+          description: "Prometheus cannot scrape the Nginx metrics endpoint for more than 1 minute."
